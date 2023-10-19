@@ -9,6 +9,7 @@ import Weatherdiv from './Weatherdiv';
 const Home = () => {
   const [input, setInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [currentData,setcurrentData] = useState([])
 
   const {state,dispatch} = useContext(WeatherContext)
   console.log("city",state.city)
@@ -36,10 +37,11 @@ const Home = () => {
 // const saveurl = makeUrl(url,keys)
 // console.log("saveurl",saveurl)
 
-const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
+// const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
     let lat = state.city && state.city.lat ? state.city.lat : '';
     let long = state.city && state.city.lng ? state.city.lng : '';
     let exclude = 'hourly,minutely';
+    // console.log("p",process.env.api)
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=f56f24967aaf51182d1d4df628297c6d`
     // const url =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=metric&appid=${APIKEY}`
     // const url = `https://api.openweathermap.org/data/2.5/forecast?city=${state.city}&lat=${lat}&lon=${long}&exclude=${exclude}&id=524901&APPID=${APIKEY}`
@@ -48,6 +50,7 @@ const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
     const fetchData = ()=>{
         axios(url).then((data)=>{
             console.log(data)
+            console.log(data.data.current)
             let _daily = data.data.daily
             dispatch({
                 type:'SET_DAILY',
@@ -74,6 +77,9 @@ const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
       const matchingCities = cities.filter(city => {
         return city.city.toLowerCase().includes(value) || city.admin_name.toLowerCase().includes(value);
       });
+
+    // Filter out null entries
+  
       setSuggestions(matchingCities);
     } else {
       setSuggestions([]);
@@ -104,7 +110,7 @@ const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
 
 
   return (
-    <div id="main">
+    <>
       <div id="search-container">
         <i className="fa-solid fa-location-dot fa-2x" />
         <input type="text" placeholder="enter a city..." value={input} onChange={handleChange} />
@@ -125,7 +131,7 @@ const APIKEY = "f56f24967aaf51182d1d4df628297c6d";
         )}
         <WeekInfoCard></WeekInfoCard>
         <Weatherdiv></Weatherdiv>
-    </div>
+    </>
   );
 }
 

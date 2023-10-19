@@ -9,9 +9,11 @@ html,body{
   height:100%
 }
 #main{
-  width:100%;
+  width:60%;
   height:100%;
   background-color: #ccc;
+  border: 1px solid red;
+  margin: auto;
   /* background-color: red; */
 }
 #search-container{
@@ -80,7 +82,11 @@ html,body{
 }
 
 .card{
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-color: rgb(209, 236, 247);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5px 5px;
+  
 }
 .weatherdiv{
   width: 90%;
@@ -92,6 +98,7 @@ html,body{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: black;
   padding: 10px 10px;
+  margin-bottom: 2%;
 }
 
 .twodiv{
@@ -100,6 +107,7 @@ html,body{
   margin: auto;
   justify-content:space-between;
   align-items: center;
+  margin: 1vw 0px;
 }
 .leftdiv,.rightdiv{
   background-color: rgb(181, 225, 243);
@@ -116,5 +124,21 @@ html,body{
 .sundetails div{
   padding: 10px 10px;
   color: black;
-  background-color: rgb(181, 225, 243);
+  /* background-color: rgb(181, 225, 243); */
+  padding: 10px 10px;
+}
+
+.chart-container{
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.sunchart{
+  width:90%;
+  margin: auto;
+}
+.sunchart img{
+  width: 100%;
+  object-fit: cover;
 }

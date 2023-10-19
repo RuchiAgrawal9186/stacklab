@@ -3,6 +3,7 @@ import { WeatherContext } from '../Context/WeatherContextProvider';
 import dayjs from "dayjs";
 import HourWiseData from './HourWiseData';
 
+
 const Weatherdiv = () => {
     
 
@@ -30,8 +31,8 @@ const Weatherdiv = () => {
         return `${formattedHours}.${formattedMinutes}${ampm}`;
       }
       
-      const sunriseTimestamp = current.sunrise;
-      const sunsetTimestamp = current.sunset;
+      const sunriseTimestamp = current.sunset;
+      const sunsetTimestamp = current.sunrise;
       
       const sunriseTime = convertTime(sunriseTimestamp);
       const sunsetTime = convertTime(sunsetTimestamp);
@@ -76,6 +77,10 @@ const Weatherdiv = () => {
         <h4>{sunsetTime}</h4>
 
         </div>
+    </div>
+
+    <div className='sunchart'>
+      <img src="../images/sunchart.PNG" alt="SUN" />
     </div>
 
     </div>
