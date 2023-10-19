@@ -7,7 +7,7 @@ function LineChart({ data, options }) {
             <Line
                 data={data}
                 options={options}
-                style={{height:"80vh",width:"100%",margin:"auto"}}
+                style={{height:"100vh",width:"97%",margin:"auto"}}
             />
         </div>
     );

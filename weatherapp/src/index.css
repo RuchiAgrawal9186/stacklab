@@ -121,11 +121,17 @@ html,body{
   align-items: center;
   margin: 3vw 0px;
 }
-.leftdiv,.rightdiv{
+.leftdiv{
   background-color: rgb(215, 236, 245);
   color: black;
   padding: 10px 10px;
-  margin-left: 1%;
+  margin-left: 5%;
+}
+.rightdiv{
+  background-color: rgb(215, 236, 245);
+  color: black;
+  padding: 10px 10px;
+
 }
 .sundetails{
   display: flex;
@@ -224,7 +230,7 @@ html,body{
     /* height: 50vh; */
   }
   .weatherdiv{
-    width: 94%;
+    width: 97%;
     margin: auto;
     justify-content: center;
     align-items: center;
