@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+html,body{
+  width:100%;
+  height:100%
+}
+#main{
+  width:100%;
+  height:100%;
+  background-color: #ccc;
+  /* background-color: red; */
+}
+#search-container{
+  position: relative;
+  width:90%;
+  height:50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  color: black;
+  margin: auto;
+  border:1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 1%;
+  gap:20px;
+  padding: 3px 2px;
+}
+#search-container input{
+  width:90%;
+  height:40px;
+  outline: none;
+  border: none;
+  font-size: 1vw;
+}
+.suggestions {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  right: 0;
+  /* background-color:red; */
+  border: 1px solid #ccc;
+  border-top: none;
+  height:300px;
+  width: 90%;
+  color:black;
+  margin: auto;
+  align-items: center;
+}
+
+.suggestions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f9f9f9;
+}
+
+.cardlist
+{
+    width:90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-top: 5%;
+}
+
+.card{
+  border: 1px solid red;
+}
+.weatherdiv{
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: black;
+  padding: 10px 10px;
+}
+
+.twodiv{
+  display: flex;
+  width:90%;
+  margin: auto;
+  justify-content:space-between;
+  align-items: center;
+}
+.leftdiv,.rightdiv{
+  background-color: rgb(181, 225, 243);
+  color: black;
+  padding: 10px 10px;
+}
+.sundetails{
+  display: flex;
+  width:90%;
+  margin: auto;
+  justify-content:space-between;
+  align-items: center;
+}
+.sundetails div{
+  padding: 10px 10px;
+  color: black;
+  background-color: rgb(181, 225, 243);
+}
