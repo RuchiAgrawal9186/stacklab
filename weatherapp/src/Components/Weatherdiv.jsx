@@ -43,11 +43,13 @@ const Weatherdiv = () => {
     <>
       <div className='weatherdiv'>
 
-        <h1 className="weatherTemp" style={{ display: "inline" }}>{Math.round(current.temp.max)}°C </h1>
+        <div className='tempdetails'>
+        <h1 className="weatherTemp">{Math.round(current.temp.max)}°C </h1>
         <img
           className="weatherIcon" alt="myit"
           src={`http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}
         />
+        </div>
 
         <HourWiseData></HourWiseData>
 

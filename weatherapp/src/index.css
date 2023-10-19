@@ -11,8 +11,8 @@ html,body{
 #main{
   width:60%;
   height:100%;
-  background-color: #ccc;
-  border: 1px solid red;
+  background-color:#ccc;
+  /* border: 1px solid red; */
   margin: auto;
   margin-top: 2%;
   /* background-color: red; */
@@ -42,7 +42,7 @@ html,body{
 }
 .suggestions {
   position: absolute;
-  top: 8%;
+  top: 17%;
   left: 0;
   right: 0;
   /* background-color:red; */
@@ -53,6 +53,7 @@ html,body{
   color:black;
   margin: auto;
   align-items: center;
+  background-color: #bad9f5;
 }
 
 .suggestions ul {
@@ -90,6 +91,9 @@ html,body{
   padding: 5px 5px;
   
 }
+.card img{
+  width: 100%;
+}
 .weatherdiv{
   width: 90%;
   margin: auto;
@@ -102,19 +106,26 @@ html,body{
   padding: 10px 10px;
   margin-bottom: 2%;
 }
-
+.tempdetails
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
 .twodiv{
   display: flex;
   width:90%;
   margin: auto;
   justify-content:space-between;
   align-items: center;
-  margin: 1vw 0px;
+  margin: 3vw 0px;
 }
 .leftdiv,.rightdiv{
-  background-color: rgb(181, 225, 243);
+  background-color: rgb(215, 236, 245);
   color: black;
   padding: 10px 10px;
+  margin-left: 1%;
 }
 .sundetails{
   display: flex;
@@ -143,4 +154,94 @@ html,body{
 .sunchart img{
   width: 100%;
   object-fit: cover;
+}
+
+
+
+@media (min-width:300px) and (max-width:600px) {
+
+  #main{
+    width:100%;
+    height:100%;
+    background-color: whitesmoke;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 2%;
+    /* background-color: red; */
+  }
+  #search-container{
+    position: relative;
+    width:90%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    color: black;
+    margin: auto;
+    border:1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 1%;
+    gap:20px;
+    padding: 3px 2px;
+  }
+  #search-container input{
+    width:70%;
+    height:40px;
+    outline: none;
+    border: none;
+    font-size: 4vw;
+  }
+  .container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .cardlist {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5%;
+    padding: 5px; /* Add some padding to prevent the cards from sticking to the edges */
+  }
+  
+  .card {
+    width:100%;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px;
+  }
+  .card img{
+    width: 100%;
+  }
+  .chart-container{
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    /* height: 50vh; */
+  }
+  .weatherdiv{
+    width: 94%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: black;
+    padding: 5px 10px;
+    margin-bottom: 2%;
+  }
+  .sunchart{
+    width:98%;
+    margin: auto;
+  }
+  .sunchart img{
+    width: 100%;
+    object-fit: cover;
+  }
+  
 }

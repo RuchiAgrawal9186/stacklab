@@ -50,8 +50,8 @@ const HourWiseData = () => {
         data: temperatures,
         fill: false,
         borderColor: 'blue',
-        tension: 0.1,
-        pointRadius: 6
+        tension: 0.5,
+        pointRadius: 3
       },
     ],
   };

@@ -22,6 +22,7 @@ const WeekInfoCard = () => {
       }, [state.daily, selectedCard]);
   return (
     <>
+    <div className='container'>
     <div className='cardlist'>
 
     {
@@ -39,6 +40,7 @@ const WeekInfoCard = () => {
                         }) : ''
                     }
 
+    </div>
     </div>
     </>
   )
